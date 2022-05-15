@@ -1,0 +1,58 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2003;
+  box-shadow: -2px 0 6px #888;
+  background: #232121;
+}
+
+.sidebar-menu {
+  border: none;
+  :deep() {
+    --el-menu-hover-bg-color: #2e2c2c !important;
+  }
+  &:not(.el-menu--collapse) {
+    width: 250px;
+  }
+}
+
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--el-overlay-color-lighter);
+  z-index: 2002;
+}
+
+.sidebar-info {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  text-transform: uppercase;
+  color: #dcdada;
+  font-weight: bold;
+  white-space: nowrap;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.logout-btn {
+  font-size: 1.3em;
+  line-height: 1em;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    color: var(--el-color-primary);
+  }
+}
